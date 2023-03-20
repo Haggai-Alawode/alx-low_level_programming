@@ -9,7 +9,7 @@
 int main(void)
 {
 	int num1;
-	int num;
+	int num2;
 
 	for (num1 =0; num1 < 100; num1++)
 	{
@@ -17,7 +17,7 @@ int main(void)
 		{
 			if (num1 < num2)
 			{
-				putchar('0' + num1 /10);
+				putchar('0' + num1 / 10);
 				putchar('0' + num1 % 10);
 				putchar(32);
 				putchar('0' + num2 / 10);
