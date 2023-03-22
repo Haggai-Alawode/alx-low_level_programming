@@ -8,30 +8,23 @@
 
 int main(void)
 {
-	int counter;
+	int i;
 	int countto = 50;
-	long a = 1;
-	long b = 2;
+	long int a = 0;
+	long int b = 1;
+	long int c = 1;
 
-	for (counter = 1; counter <= (countto / 2); counter++)
+	for (i = 1; i <= countto; counter++)
 	{
-		printf("%li %li ", a, b);
-		a += b;
-		b += a;
+		printf("%li", c);
+		a = b;
+		b = c;
+		c = a + b;
 		if (counter < 50)
 		{
-			printf(",");
+			printf(", ");
 		}
 	}
-	if (countto % 2 == 1)
-	{
-		printf("%li", a);
-		if (counter < 50)
-		{
-			printf(",");
-		}
-	}
-
 	printf("\n");
 
 	return (0);
