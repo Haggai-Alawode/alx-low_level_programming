@@ -1,8 +1,8 @@
-#include "main_h"
+#include "main.h"
 /**
- * main - print _putchar
- * is written by Haggai
- * Return: 0
+ * main - Entry point 
+ * Description: print _putchar to stdout
+ * Return: always 0
  */
 
 int main(void)
@@ -11,10 +11,11 @@ int main(void)
 	_putchar('p');
 	_putchar('u');
 	_putchar('t');
-	_putchar('C');
+	_putchar('c');
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-	return (0);
+
+	return(0);
 }
