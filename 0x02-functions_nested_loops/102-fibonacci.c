@@ -24,7 +24,13 @@ int main(void)
 		}
 	}
 	if (countto % 2 == 1)
+	{
 		printf("%li", a);
+		if (counter < 50)
+		{
+			printf(",");
+		}
+	}
 
 	printf("\n");
 
