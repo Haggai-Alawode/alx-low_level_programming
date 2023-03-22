@@ -18,6 +18,10 @@ int main(void)
 		printf("%li %li ", a, b);
 		a += b;
 		b += a;
+		if (counter < 50)
+		{
+			printf(",");
+		}
 	}
 	if (countto % 2 == 1)
 		printf("%li", a);
