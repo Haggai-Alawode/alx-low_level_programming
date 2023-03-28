@@ -1,25 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+*Main- a program that generates random password
+*Return - 0
+*/
 
 int main(void)
 {
-  int n;
-  int a[5];
-  int *p;
+    char password[84];
+    int index = 0, sum = 0, diff_half1, diff_half2;
 
-  a[2] = 1024;
-  p = &n;
-  /*
-   * write your line of code here...
-   * Remember:
-   * - you are not allowed to use a
-   * - you are not allowed to modify p
-   * - only one statement
-   * - you are not allowed to code anything else than this line of code
-   */
+    srand(time(0));
+    while(sum < 2772)
+    {
+        password[index] = 33 + rand() % 94;
+        sum += password[index++];
+    }
+    password[index] = '\0';
 
-  *(p + 5) = 98;
+    if (sum != 2772)
+    {
+        diff_half1 = (sum - 2772) / 2;
+        diff_half2 = (sum - 2772) / 2;
+        if ((sum - 2772) % 2 != 0)
+            diff_half1++;
+         for (index = 0; password[index]; index++)
+         {
+             if (password[index] >= (33 + diff_half1))
+             {
+                 password[index] -= diff_half1;
+                 break;
+             }
+         }
+         for (index = 0; password[index]; index++)
+         {
+             if (password[index] >= (33 + diff_half2))
+             {
+                 password[index] -= diff_half2;
+                 break;
+             }
+         }
+    }
 
-  /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
-  return (0);
+    return 0;
 }
