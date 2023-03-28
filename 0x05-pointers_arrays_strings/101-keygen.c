@@ -43,6 +43,6 @@ int main(void)
              }
          }
     }
-
-    return 0;
+	printf("%s", password);
+    return (0);
 }
