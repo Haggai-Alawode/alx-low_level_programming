@@ -1,16 +1,14 @@
-#include main.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 /**
-  * main - a program what prints the # of args passed to it
-  * @argc: the # of args
-  * @argv: the names of args
+  * main - a program that prints it's name
+  * @argc: the # of arguments
+  * @argv: the names of arguments
   * Return: 0
-  *
-  *
   */
-int main(int argc, __attribute__((unused))char **argv)
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	if (argc)
+		printf("%s\n", argv[0]);
 	return (0);
 }
+
