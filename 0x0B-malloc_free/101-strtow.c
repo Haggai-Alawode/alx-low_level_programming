@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * strtow -
@@ -7,5 +7,5 @@
  */
 char **strtow(char *str)
 {
-
+ return (0);
 }
